@@ -1,7 +1,7 @@
 {
-  "name": "tonos-se-tondev",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@ton-actions/tonos-se-tondev",
+  "version": "1.0.20",
+  "description": "Bridge between tondev and @ton-actions/tonos-se-package package",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ton-actions/tonos-se-tondev#readme",
   "dependencies": {
-    "@ton-actions/tonos-se-package": "^0.28.6-fix.6"
+    "@ton-actions/tonos-se-package": "latest",
+    "node-fetch": "^2.6.1"
   }
 }
