@@ -1,0 +1,22 @@
+{
+  "name": "tonos-se-tondev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ton-actions/tonos-se-tondev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ton-actions/tonos-se-tondev/issues"
+  },
+  "homepage": "https://github.com/ton-actions/tonos-se-tondev#readme",
+  "dependencies": {
+    "@ton-actions/tonos-se-package": "^0.28.6-fix.6"
+  }
+}
