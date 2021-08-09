@@ -56,7 +56,7 @@ async function getTonosSe(version) {
     if (version) {
         execSync(`npm i --no-save @ton-actions/tonos-se-package@${version === 'latest' ? '' : '_'}${version}`, { cwd: packagePath })
     }
-    Object.keys(require.cache).filter(p => p.startsWith('@ton-actions')).forEach(function (key) { delete require.cache[key] })
+    Object.keys(require.cache).forEach(function (key) { delete require.cache[key] })
     return require('@ton-actions/tonos-se-package');
 }
 
