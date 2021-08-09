@@ -5,5 +5,5 @@ export async function seVersionCommand(): Promise<string>;
 export async function seStartCommand(): any;
 export async function seStopCommand(): any;
 export async function seResetCommand(): any;
-export async function getAvailableVersions(): string[];
+export async function getAvailableVersions(): Promise<string[]>;
 export async function seSetCommand(version: string, port: string, dbPort: string): any;
