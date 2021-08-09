@@ -1,5 +1,8 @@
+const path = require('path');
 const fetch = require('node-fetch');
 const { execSync } = require("child_process");
+const node_modules = require('node_modules-path');
+const packagePath = path.resolve(path.join(node_modules(),'..'));
 
 async function seInfoCommand() {
     let tonosSe = await getTonosSe();
@@ -51,7 +54,7 @@ async function seSetCommand(version, port, dbPort) {
 
 async function getTonosSe(version) {
     if (version) {
-        execSync(`npm i --no-save @ton-actions/tonos-se-package@${version === 'latest' ? '' : '_'}${version}`)
+        execSync(`npm i --no-save @ton-actions/tonos-se-package@${version === 'latest' ? '' : '_'}${version}`, {cwd: packagePath})
         delete require.cache[require.resolve('@ton-actions/tonos-se-package')];
     }
     return require('@ton-actions/tonos-se-package');
